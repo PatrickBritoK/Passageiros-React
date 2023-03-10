@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: rgba(56, 199, 99, 0.7);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.App {
+    text-decoration: none;
+    width: 40rem;
+    height: 30rem;
+    background-color: rgb(33, 150, 158);
+    border-radius:2rem ;
+}
+.paginas {
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.elementos {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center ;
+    font-family: sans-serif;
+}
