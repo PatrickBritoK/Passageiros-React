@@ -15,7 +15,7 @@
     text-decoration: none;
     width: 40rem;
     height: 30rem;
-    background-color: rgb(33, 150, 158);
+    background-color: rgba(33, 150, 158, 0.7);
     border-radius:2rem ;
 }
 .paginas {
@@ -24,8 +24,21 @@
     color: rgb(0, 0, 0);
 }
 .elementos {
+    gap: 1rem;
     margin-top: 1rem;
     display: flex;
     justify-content: center ;
     font-family: sans-serif;
+}
+.elementos input {
+    font-size: 1rem;
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
