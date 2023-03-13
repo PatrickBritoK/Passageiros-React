@@ -1,6 +1,6 @@
 import express from "express";
 import AppDataSource from "./config/Database";
-import { AeroportoController } from "./controller/AeroportoController";
+import { AeroportoController, PassageiroController, VooController } from "./controller/AeroportoController";
 
 AppDataSource.initialize()
   .then(() => {
@@ -20,6 +20,18 @@ AppDataSource.initialize()
     app.get("/aeroporto/:id", new AeroportoController().get);
     app.put("/aeroporto/:id", new AeroportoController().update);
     app.delete("/aeroporto/:id", new AeroportoController().delete);
+
+    app.get('/passageiro/todos', new PassageiroController().list);
+    app.post("/passageiro", new PassageiroController().create);
+    app.get("/passageiro/:id", new PassageiroController().get);
+    app.put("/passageiro/:id", new PassageiroController().update);
+    app.delete("/passageiro/:id", new PassageiroController().delete);
+
+    app.get('/voo/todos', new VooController().list);
+    app.post("/voo", new VooController().create);
+    app.get("/voo/:id", new VooController().get);
+    app.put("/voo/:id", new VooController().update);
+    app.delete("/voo/:id", new VooController().delete);
 
     app.listen(8007);
   })

@@ -22,7 +22,7 @@ export function Aeroporto() {
   return (
     <div className="paginas">
       <span>Aeroportos</span>
-      <a href="/aeroporto-criar">Criar usuário</a>
+
       <table>
         <thead>
           <td>Código</td>
@@ -38,14 +38,15 @@ export function Aeroporto() {
                 <td>{aeroporto.nome}</td>
                 <td>{aeroporto.endereco}</td>
                 <td>
-                  <a href={`/aeroporto/${aeroporto.codigo}`}>Ver</a>
-                  <button onClick={() => onClickDeleteAeroporto(aeroporto.codigo)} >Delete</button>
+                  <a className="ver" href={`/aeroporto/${aeroporto.codigo}`}>Ver</a>
+                  <button className="deletar" onClick={() => onClickDeleteAeroporto(aeroporto.codigo)} >Delete</button>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <a className="criar" href="/aeroporto-criar">Criar Aeroporto</a>
     </div>
   );
 }

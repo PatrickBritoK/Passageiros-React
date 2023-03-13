@@ -1,5 +1,4 @@
 
-import { Form } from "react-router-dom";
 import { postAeroporto } from "../services/aeroporto";
 
 export function AeroportoNovo() {
@@ -13,7 +12,7 @@ export function AeroportoNovo() {
     })
   };
   return (
-    <form >
+    <form onSubmit={onSubmit}>
       <div>
         <span>Nome</span>
         <input type="text" name="nome" />
@@ -23,7 +22,7 @@ export function AeroportoNovo() {
         <span>Endereco</span>
         <input type="text" name="endereco" />
       </div>
-      <input type="submit" value="Salvar" />
+      <input className="salvar" type="submit" value="Salvar" />
     </form>
   )
 }

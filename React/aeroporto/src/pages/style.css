@@ -1,34 +1,63 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+header {
+    overflow-y: hidden;
 }
 .header {
     background-color: rgba(56, 199, 99, 0.7);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 .App {
+    margin-top: 3rem;
     text-decoration: none;
-    width: 40rem;
-    height: 30rem;
+    width: 50rem;
+    min-height: 30rem;
     background-color: rgba(33, 150, 158, 0.7);
     border-radius:2rem ;
+    padding-bottom: 2rem;
+    /* box-shadow: 2rem; */
 }
 .paginas {
     font-size: 2rem;
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
+.homes {
+    text-decoration: none;
+    color: inherit;
+    padding: 2rem;
+}
+.homes 
+.criar {
+    padding-left: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: aqua;
+}
+.criar:hover {
+    background-color: rgb(17, 138, 138);
+}
 .elementos {
-    gap: 1rem;
     margin-top: 1rem;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     font-family: sans-serif;
+}
+.elementos td {
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 .elementos input {
     font-size: 1rem;
@@ -37,8 +66,40 @@
     border-radius: 1rem;
     border: 1px solid black;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+.deletar {
+    border-radius: 0.5rem;
+    color: black;
+    background-color: blueviolet;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-bottom: 0.1rem;
+    width: 5rem;
+    height: 1.5rem;
+}
+.deletar:hover {
+    background-color: white;
+}
+.salvar {
+    background-color: rgb(14, 224, 49);
+    cursor: pointer;
+}
+.salvar:hover {
+    background-color: white;
+}
+.ver {
+    text-decoration: none;
+    border: 0.5px solid black;    
+    border-radius: 0.5rem;
+    padding: 0.1rem 1rem;
+    text-align: center;
+    color: inherit;
+}
+.ver:hover {
+    background-color: black;
+    color: blueviolet;
 }

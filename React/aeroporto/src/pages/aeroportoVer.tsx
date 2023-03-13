@@ -14,7 +14,7 @@ export function AeroportoVer() {
 
   return (
     <div>
-      <span>Usuário</span>
+      <span>Aeroporto</span>
       <div>
         <span>Código</span>
         <input type="text" value={aeroportos?.codigo} />
