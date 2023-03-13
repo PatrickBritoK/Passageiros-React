@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Aeroporto } from "./pages/aeroporto";
 import { AeroportoVer } from "./pages/aeroportoVer";
+import { AeroportoNovo } from "./pages/aeroportoNovo";
+
+
 import "../src/pages/style.css";
 
 function App() {
@@ -18,6 +21,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/aeroporto" element={<Aeroporto />} />
               <Route path="/aeroporto/:id" element={<AeroportoVer />} />
+              <Route path="/aeroporto-criar" element={<AeroportoNovo/>} />
             </Routes>
           </Router>
         </div>

@@ -11,6 +11,7 @@ export function AeroportoVer() {
     getAeroporto(parseInt(params.id||'', 10))
       .then(res => setUsuario(res.data));
   }
+
   return (
     <div>
       <span>Usuário</span>
