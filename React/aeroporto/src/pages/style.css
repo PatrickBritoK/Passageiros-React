@@ -7,7 +7,7 @@ header {
     overflow-y: hidden;
 }
 .header {
-    background-color: rgba(56, 199, 99, 0.7);
+    background-color: rgba(85, 14, 199, 0.7);
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -20,7 +20,7 @@ header {
     text-decoration: none;
     width: 50rem;
     min-height: 30rem;
-    background-color: rgba(33, 150, 158, 0.7);
+    background-color: rgba(37, 109, 114, 0.7);
     border-radius:2rem ;
     padding-bottom: 2rem;
     /* box-shadow: 2rem; */
@@ -100,6 +100,18 @@ header {
     color: inherit;
 }
 .ver:hover {
+    background-color: black;
+    color: blueviolet;
+}
+.atualizar {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid black;
+    padding: 0.4rem;
+    border-radius: 1rem;
+}
+.atualizar:hover {
     background-color: black;
     color: blueviolet;
 }

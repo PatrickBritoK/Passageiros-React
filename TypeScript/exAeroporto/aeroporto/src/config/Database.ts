@@ -1,7 +1,10 @@
 import "dotenv/config";
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { Aeroporto } from "../model/AeroportoModel";
+import { Aeroporto  } from "../model/AeroportoModel";
+import { Passageiros} from "../model/PassageiroModel";
+import { Voo } from "../model/VooModel";
+
 
 const AppDataSource = new DataSource({
   type: 'oracle',
@@ -10,8 +13,9 @@ const AppDataSource = new DataSource({
   username: 'system',
   password: 'pulsati2023',
   database: 'xe',
-  entities: [Aeroporto],
+  entities: [Aeroporto, Passageiros, Voo],
   migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
+  // synchronize:true
 });
 console.log('AppDataSource', AppDataSource.initialize);
 export default AppDataSource;

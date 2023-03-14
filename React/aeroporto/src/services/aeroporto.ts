@@ -22,3 +22,9 @@ export async function deleteAeroporto(id: number) {
   return axios.create({ headers: { 'Content-Type': 'application/json' }})
   .delete(`http://localhost:8007/aeroporto/${id}`)
 }
+
+export async function putAeroporto(dados: AeroportoModel) {
+  return axios
+    .create({ headers: { "Content-Type": "application/json" } })
+    .put(`http://localhost:8007/aeroporto/${dados.codigo}`, dados);
+}

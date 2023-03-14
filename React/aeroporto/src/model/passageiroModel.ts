@@ -1,4 +1,4 @@
 export interface PassageirosModel {
-    codigoVoo?: number;
-    nome: string;
+    codigopassageiro?: number;
+    nomepassageiro: string;
 }

@@ -22,3 +22,10 @@ export async function deletePassageiros(id: number) {
   return axios.create({ headers: { 'Content-Type': 'application/json' }})
   .delete(`http://localhost:8007/passageiros/${id}`)
 }
+
+
+export async function putPassageiro(dados: PassageirosModel) {
+  return axios
+    .create({ headers: { "Content-Type": "application/json" } })
+    .put(`http://localhost:8007/passageiros/${dados.codigopassageiro}`, dados);
+}

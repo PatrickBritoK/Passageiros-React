@@ -4,6 +4,8 @@ import { AeroportoModel } from "../model/aeroportoModel";
 import { getTodosAeroportos } from "../services/aeroporto";
 import { deleteAeroporto } from "../services/aeroporto";
 
+import "../pages/style.css";
+
 export function Aeroporto() {
   const [aeroportos, setAeroportos] = useState<any[]>();
 
@@ -25,10 +27,12 @@ export function Aeroporto() {
 
       <table>
         <thead>
-          <td>Código</td>
-          <td>Nome</td>
-          <td>endereco</td>
-          <td>Ações</td>
+          <tr>
+            <td>Código</td>
+            <td>Nome</td>
+            <td>endereco</td>
+            <td>Ações</td>
+          </tr>
         </thead>
         <tbody>
           {aeroportos?.map((aeroporto) => {
@@ -38,15 +42,27 @@ export function Aeroporto() {
                 <td>{aeroporto.nome}</td>
                 <td>{aeroporto.endereco}</td>
                 <td>
-                  <a className="ver" href={`/aeroporto/${aeroporto.codigo}`}>Ver</a>
-                  <button className="deletar" onClick={() => onClickDeleteAeroporto(aeroporto.codigo)} >Delete</button>
+                  <a className="ver" href={`/aeroporto/${aeroporto.codigo}`}>
+                    Ver
+                  </a>
+                  <button
+                    className="deletar"
+                    onClick={() => onClickDeleteAeroporto(aeroporto.codigo)}
+                  >
+                    Delete
+                  </button>
+                  <a className="atualizar" href={`/aeroportoAtualizar/${aeroporto.codigo}`}>
+                    Atualizar
+                  </a>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
-      <a className="criar" href="/aeroporto-criar">Criar Aeroporto</a>
+      <a className="criar" href="/aeroporto-criar">
+        Criar Aeroporto
+      </a>
     </div>
   );
 }
