@@ -35,7 +35,8 @@ function App() {
             |
             <a className="homes" href="/Voos">
               Voos
-            </a>
+            </a>|
+            <a className="homes" href="/AddPassageiroVoo">Add PV</a>
           </div>
           <div className="elementos">
             <Router>
@@ -56,7 +57,7 @@ function App() {
                   element={<PassageiroAtualizar />}
                 />
                 <Route path="/voos" element={<Voo />} />
-                <Route path="/voo/:id" element={<VoosVer />} />
+                <Route path="/voos/:id" element={<VoosVer />} />
                 <Route path="/voo-criar" element={<VooCriar />} />
                 <Route path="/VooAtualizar/:id" element={<VooAtualizar/>} />
               </Routes>
