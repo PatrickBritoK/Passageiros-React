@@ -1,2 +1,2 @@
 # Passageiros-React
-PRA VANESSA
+Aula sobre React/Typescript.
